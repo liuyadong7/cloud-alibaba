@@ -3,8 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <modules>
-        <module>Order</module>
+        <module>order</module>
         <module>stock</module>
+        <module>order-nacos</module>
+        <module>stock-nacos</module>
+        <module>order-ribbon</module>
     </modules>
 
     <groupId>com.liuyd.springcloud</groupId>
@@ -68,6 +71,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring.boot.version}</version>
             </plugin>
         </plugins>
     </build>
