@@ -25,6 +25,9 @@ public class OrderApplication {
     @Bean
     @LoadBalanced
     public RestTemplate restTemplate(RestTemplateBuilder builder) {
+        // 设置超时时间
+        // builder.setReadTimeout();
+        // builder.setConnectTimeout();
         RestTemplate restTemplate = builder.build();
         return restTemplate;
     }
