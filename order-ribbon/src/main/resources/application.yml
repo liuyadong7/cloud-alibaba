@@ -15,4 +15,8 @@ spring:
         # weight: 1 # 权重，结合负载均衡设置
 stock-service:
   ribbon:
-    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
+    NFLoadBalancerRuleClassName: com.liuyd.ribbon.rule.CustomRule
+ribbon:
+  eager-load: # 设置懒加载
+    enabled: true
+    clients: stock-service
